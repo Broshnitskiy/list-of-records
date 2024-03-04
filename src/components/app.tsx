@@ -38,7 +38,7 @@ function App() {
     <section>
       <Container>
         <div className="text-center mb-4">
-          <h1 className="text-center">Record List</h1>
+          <h1 className="text-center mb-4 pt-4">Record List</h1>
 
           <Button variant="primary" onClick={handleShowModal}>
             + ADD NEW RECORD +

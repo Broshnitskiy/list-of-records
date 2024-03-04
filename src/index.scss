@@ -2,9 +2,19 @@ body {
   font-family: 'Lexend', sans-serif;
   font-style: normal;
   font-weight: 500;
+  background-color: rgb(19, 21, 22);
+  color: rgb(32, 178, 240);
+  min-height: 100vh;
 
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  @media screen and (min-width: '768px') {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url('./assets/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

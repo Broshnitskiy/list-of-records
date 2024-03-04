@@ -5,7 +5,6 @@ import ModalComponent from './modal';
 import { getRecords } from '../redux/selectors';
 import { editRecord } from '../redux/records-slice';
 import { IRecordState } from '../redux/records-slice';
-
 import toast from 'react-hot-toast';
 
 interface IRecordListProps {
@@ -59,16 +58,24 @@ const RecordList: React.FC<IRecordListProps> = ({ filter }) => {
     <p style={{ textAlign: 'center' }}>No saved records</p>
   ) : (
     <>
-      <h2 style={{ textAlign: 'center', fontSize: '26px' }}>
-        Total records: {renderRecords.length}{' '}
-      </h2>
-      <h3 style={{ textAlign: 'center', fontSize: '18px' }}>
-        Completed Records: {completedRecords}
-      </h3>
-      <h3 style={{ textAlign: 'center', fontSize: '18px' }}>
-        Current Records: {unCompletedRecords}
-      </h3>
-      <ul>
+      <div
+        style={{
+          width: '500px',
+          textTransform: 'uppercase',
+          marginRight: 'auto',
+          marginLeft: 'auto',
+          marginBottom: '20px',
+        }}
+      >
+        <h2 style={{ fontSize: '20px', marginBottom: '10px', fontWeight: 700 }}>
+          Total records: {renderRecords.length}
+        </h2>
+        <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>
+          Completed Records: {completedRecords}
+        </h3>
+        <h3 style={{ fontSize: '18px' }}>Current Records: {unCompletedRecords}</h3>
+      </div>
+      <ul style={{ minWidth: '420px', padding: 0 }}>
         {renderRecords.map(record => (
           <RecordItem key={record.id} record={record} handleShow={handleShow} />
         ))}

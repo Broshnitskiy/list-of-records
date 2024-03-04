@@ -25,7 +25,7 @@ const RecordItem: React.FC<IRecordItemProps> = ({ record, handleShow }) => {
   };
 
   return (
-    <li className="mb-4">
+    <li className="mb-2">
       <ListGroup horizontal as="ul" className="justify-content-center">
         <ListGroup.Item
           variant="info"
@@ -37,9 +37,14 @@ const RecordItem: React.FC<IRecordItemProps> = ({ record, handleShow }) => {
           <p className="mb-0">{name}</p>
         </ListGroup.Item>
 
-        <ListGroup.Item variant="info" as="li" style={{ width: '250px' }}>
+        <ListGroup.Item variant="info" as="li" style={{ width: '140px' }}>
           <strong>Status:</strong>
-          <p className="mb-0">{status}</p>
+          <p
+            className="mb-0"
+            style={{ color: status.toLowerCase() === 'completed' ? 'green' : 'orangered' }}
+          >
+            {status}
+          </p>
         </ListGroup.Item>
 
         <Button variant="danger" onClick={handleDelete}>
