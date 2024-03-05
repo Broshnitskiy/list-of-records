@@ -16,7 +16,7 @@ interface IFormData {
   status: string;
 }
 
-const MAX_NAME_LENGTH = 10;
+const MAX_NAME_LENGTH = 15;
 
 const FormComponent: FC<IFormProps> = ({ onSubmitRecord, editingRecord }) => {
   const {
@@ -49,7 +49,7 @@ const FormComponent: FC<IFormProps> = ({ onSubmitRecord, editingRecord }) => {
         <Form.Label>Record name</Form.Label>
         <Form.Control
           type="text"
-          placeholder="Record name"
+          placeholder={`Record name (less than or equal to ${MAX_NAME_LENGTH} characters)`}
           title="Name may contain only letters, apostrophe"
           {...register('name', {
             required: true,

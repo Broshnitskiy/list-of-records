@@ -1,3 +1,3 @@
-import {RootState} from './store'
+import { RootState } from './store';
 
-export const getRecords = (state:RootState) => state.records;
+export const getRecords = (state: RootState) => state.records;
