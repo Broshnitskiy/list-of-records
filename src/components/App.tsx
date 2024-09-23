@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from '../redux/store';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Filter from './Filter';
-import RecordList from './record-list';
+import RecordList from './RecordList';
 import ModalComponent from './Modal';
 import { getRecords } from '../redux/selectors';
 import { addRecord } from '../redux/records-slice';
