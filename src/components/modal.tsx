@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import FormComponent from './form';
+import FormComponent from './Form';
 import { IRecordState } from '../redux/records-slice';
 
 interface IModalProps {

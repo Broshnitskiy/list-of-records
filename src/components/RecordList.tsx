@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/store';
-import RecordItem from './record-item';
-import ModalComponent from './modal';
+import RecordItem from './RecordItem';
+import ModalComponent from './Modal';
 import { getRecords } from '../redux/selectors';
 import { editRecord } from '../redux/records-slice';
 import { IRecordState } from '../redux/records-slice';
